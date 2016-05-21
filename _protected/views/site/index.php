@@ -2,8 +2,8 @@
 /* @var $this yii\web\View */
 
 $this->title = Yii::t('app', Yii::$app->name);
-?>    
-
+?>    	
+	
 	<!-- Header Carousel -->
     <header id="myCarousel" class="carousel slide">
         <!-- Indicators -->

@@ -15,6 +15,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use Yii;
+use yii\BaseYii;
 
 /**
  * Site controller.
@@ -85,7 +86,8 @@ class SiteController extends Controller
      * @return string
      */
     public function actionIndex()
-    {
+    {    	
+    	echo "<br/>";
         return $this->render('index');
     }
 
