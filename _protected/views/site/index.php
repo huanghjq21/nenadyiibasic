@@ -3,7 +3,7 @@
 
 $this->title = Yii::t('app', Yii::$app->name);
 ?>    
-ABC
+ABCXYZ
 <!-- Header Carousel -->
     <header id="myCarousel" class="carousel slide">
         <!-- Indicators -->
