@@ -1,0 +1,2400 @@
+2016-05-15 13:44:45 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Connection.php:600
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Connection.php(600): PDO->__construct('mysql:host=loca...', 'root', 'root', NULL)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Connection.php(542): yii\db\Connection->createPdoInstance()
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Connection.php(861): yii\db\Connection->open()
+#3 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Connection.php(848): yii\db\Connection->getMasterPdo()
+#4 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Command.php(894): yii\db\Command->prepare(true)
+#6 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#8 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Schema.php(149): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/console/controllers/MigrateController.php(178): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(627): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#15 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#16 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/console/Controller.php(119): yii\base\Controller->runAction('', Array)
+#17 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#18 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/console/Application.php(176): yii\base\Module->runAction('migrate', Array)
+#19 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/console/Application.php(143): yii\console\Application->runAction('migrate', Array)
+#20 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/yii(20): yii\base\Application->run()
+#22 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Connection.php:547
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Connection.php(861): yii\db\Connection->open()
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Connection.php(848): yii\db\Connection->getMasterPdo()
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#3 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Command.php(894): yii\db\Command->prepare(true)
+#4 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#6 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Schema.php(149): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/console/controllers/MigrateController.php(178): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(627): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#13 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/console/Controller.php(119): yii\base\Controller->runAction('', Array)
+#15 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#16 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/console/Application.php(176): yii\base\Module->runAction('migrate', Array)
+#17 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/console/Application.php(143): yii\console\Application->runAction('migrate', Array)
+#18 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/yii(20): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2016-05-15 13:44:45 [-][-][-][info][application] $_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'TMPDIR' => '/var/folders/5c/97js4_m907x2nlw9fknxy1l00000gn/T/'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.dsPhVXJWR7/Render'
+    'TERM_PROGRAM_VERSION' => '343.7'
+    'OLDPWD' => '/Users/HuangJunqi/Sites/nenadyiibasic'
+    'TERM_SESSION_ID' => 'D21A40B2-0B14-4904-9F31-05D231B3C84B'
+    'USER' => 'HuangJunqi'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.NHwdkX3vb2/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x0:0x0'
+    'PATH' => '/usr/local/sbin:/usr/local/sbin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/Users/HuangJunqi/Sites/nenadyiibasic/_protected'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'HOME' => '/Users/HuangJunqi'
+    'SHLVL' => '1'
+    'LOGNAME' => 'HuangJunqi'
+    'LC_CTYPE' => 'UTF-8'
+    '_' => '/usr/local/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1463319885.5479
+    'REQUEST_TIME' => 1463319885
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2016-05-15 13:45:05 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Connection.php:600
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Connection.php(600): PDO->__construct('mysql:host=loca...', 'root', 'root', NULL)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Connection.php(542): yii\db\Connection->createPdoInstance()
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Connection.php(861): yii\db\Connection->open()
+#3 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Connection.php(848): yii\db\Connection->getMasterPdo()
+#4 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Command.php(894): yii\db\Command->prepare(true)
+#6 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#8 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Schema.php(149): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/console/controllers/MigrateController.php(178): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(627): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#15 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#16 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/console/Controller.php(119): yii\base\Controller->runAction('', Array)
+#17 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#18 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/console/Application.php(176): yii\base\Module->runAction('migrate', Array)
+#19 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/console/Application.php(143): yii\console\Application->runAction('migrate', Array)
+#20 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/yii(20): yii\base\Application->run()
+#22 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Connection.php:547
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Connection.php(861): yii\db\Connection->open()
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Connection.php(848): yii\db\Connection->getMasterPdo()
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#3 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Command.php(894): yii\db\Command->prepare(true)
+#4 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#6 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Schema.php(149): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/console/controllers/MigrateController.php(178): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(627): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#13 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/console/Controller.php(119): yii\base\Controller->runAction('', Array)
+#15 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#16 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/console/Application.php(176): yii\base\Module->runAction('migrate', Array)
+#17 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/console/Application.php(143): yii\console\Application->runAction('migrate', Array)
+#18 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/yii(20): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2016-05-15 13:45:05 [-][-][-][info][application] $_SERVER = [
+    'TERM' => 'xterm-256color'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.NHwdkX3vb2/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x0:0:0'
+    'PATH' => '/usr/local/sbin:/usr/local/sbin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'HOME' => '/Users/HuangJunqi'
+    'LC_CTYPE' => 'UTF-8'
+    'SHELL' => '/bin/bash'
+    'MAIL' => '/var/mail/root'
+    'LOGNAME' => 'root'
+    'USER' => 'root'
+    'USERNAME' => 'root'
+    'SUDO_COMMAND' => '/usr/local/bin/php yii migrate'
+    'SUDO_USER' => 'HuangJunqi'
+    'SUDO_UID' => '501'
+    'SUDO_GID' => '20'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1463319905.8739
+    'REQUEST_TIME' => 1463319905
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2016-05-15 10:06:08 [::1][-][f3g94q0eamb6pcpr63rjgdgiu1][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Connection.php:600
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Connection.php(600): PDO->__construct('mysql:host=loca...', 'root', 'password', NULL)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Connection.php(542): yii\db\Connection->createPdoInstance()
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Connection.php(861): yii\db\Connection->open()
+#3 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Connection.php(848): yii\db\Connection->getMasterPdo()
+#4 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Command.php(894): yii\db\Command->prepare('<span class="ke...')
+#6 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Query.php(210): yii\db\Command->queryAll()
+#8 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/rbac/DbManager.php(945): yii\db\Query->all(Object(yii\db\Connection))
+#9 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/rbac/DbManager.php(122): yii\rbac\DbManager->loadFromCache()
+#10 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/User.php(681): yii\rbac\DbManager->checkAccess('<span class="ke...', '<span class="st...', '[]')
+#11 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/views/layouts/main.php(41): yii\web\User->can('<span class="st...')
+#12 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/View.php(325): require('/Users/HuangJun...')
+#13 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('<span class="st...', '[<span class="s...')
+#14 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Controller.php(393): yii\base\View->renderFile('<span class="st...', '[<span class="s...', Object(app\controllers\SiteController))
+#15 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Controller.php(379): yii\base\Controller->renderContent('<span class="st...')
+#16 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/controllers/SiteController.php(89): yii\base\Controller->render('<span class="st...')
+#17 [internal function]: app\controllers\SiteController->actionIndex()
+#18 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#19 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams('[]')
+#20 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#21 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#22 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#24 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Connection.php:547
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Connection.php(861): yii\db\Connection->open()
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Connection.php(848): yii\db\Connection->getMasterPdo()
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#3 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Command.php(894): yii\db\Command->prepare('<span class="ke...')
+#4 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#5 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Query.php(210): yii\db\Command->queryAll()
+#6 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/rbac/DbManager.php(945): yii\db\Query->all(Object(yii\db\Connection))
+#7 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/rbac/DbManager.php(122): yii\rbac\DbManager->loadFromCache()
+#8 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/User.php(681): yii\rbac\DbManager->checkAccess('<span class="ke...', '<span class="st...', '[]')
+#9 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/views/layouts/main.php(41): yii\web\User->can('<span class="st...')
+#10 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/View.php(325): require('/Users/HuangJun...')
+#11 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('<span class="st...', '[<span class="s...')
+#12 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Controller.php(393): yii\base\View->renderFile('<span class="st...', '[<span class="s...', Object(app\controllers\SiteController))
+#13 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Controller.php(379): yii\base\Controller->renderContent('<span class="st...')
+#14 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/controllers/SiteController.php(89): yii\base\Controller->render('<span class="st...')
+#15 [internal function]: app\controllers\SiteController->actionIndex()
+#16 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#17 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams('[]')
+#18 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#19 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#20 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#22 {main}
+Additional Information:
+
+2016-05-15 10:06:08 [::1][-][f3g94q0eamb6pcpr63rjgdgiu1][info][application] $_COOKIE = [
+    '_csrf' => '692e26aac77d654f82a5264d9c64852c91bd643d461b05252ac19055afd62aafa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"eTPEhtnK2wZBb_pI9yFnErxwlw1HPojQ\";}'
+    'PHPSESSID' => 'f3g94q0eamb6pcpr63rjgdgiu1'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf=692e26aac77d654f82a5264d9c64852c91bd643d461b05252ac19055afd62aafa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22eTPEhtnK2wZBb_pI9yFnErxwlw1HPojQ%22%3B%7D; PHPSESSID=f3g94q0eamb6pcpr63rjgdgiu1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => 'http://localhost/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.27'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '55965'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463321168.636
+    'REQUEST_TIME' => 1463321168
+]
+2016-05-15 10:10:29 [::1][-][f3g94q0eamb6pcpr63rjgdgiu1][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/rbac/DbManager.php:797
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/rbac/DbManager.php(797): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/Users/HuangJun...', 797, Array)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/rbac/helpers/RbacHelper.php(42): yii\rbac\DbManager->assign(NULL, 1)
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/models/SignupForm.php(115): app\rbac\helpers\RbacHelper::assignRole(1)
+#3 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/controllers/SiteController.php(265): app\models\SignupForm->signup()
+#4 [internal function]: app\controllers\SiteController->actionSignup()
+#5 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#6 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#7 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('signup', Array)
+#8 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/signup', Array)
+#9 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#11 {main}
+2016-05-15 10:10:28 [::1][-][f3g94q0eamb6pcpr63rjgdgiu1][info][application] $_POST = [
+    '_csrf' => 'LWQ3X1ZBbzMaAVQoDnkBQnchWDMeMwliYTFwNCcAXABrPQ8HLgsKdA=='
+    'SignupForm' => [
+        'username' => 'test'
+        'email' => 'huanghjq21@gmail.com'
+        'password' => 'password'
+    ]
+    'signup-button' => ''
+]
+
+$_COOKIE = [
+    '_csrf' => '60ec5d162bc38d30d1852b63ac54366d6aa8953fe23c3b28c3950c578f423689a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7ecwX8nqZEolHrfQLUGkqA33FY8XxJeG\";}'
+    'PHPSESSID' => 'f3g94q0eamb6pcpr63rjgdgiu1'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_COOKIE' => '_csrf=60ec5d162bc38d30d1852b63ac54366d6aa8953fe23c3b28c3950c578f423689a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227ecwX8nqZEolHrfQLUGkqA33FY8XxJeG%22%3B%7D; PHPSESSID=f3g94q0eamb6pcpr63rjgdgiu1'
+    'CONTENT_LENGTH' => '190'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/signup'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.27'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '56031'
+    'REDIRECT_URL' => '/nenadyiibasic/signup'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/signup'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463321428.748
+    'REQUEST_TIME' => 1463321428
+]
+2016-05-15 10:14:15 [::1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'Either GD PHP extension with FreeType support or ImageMagick PHP extension with PNG support is required.' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/captcha/Captcha.php:179
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/captcha/Captcha.php(94): yii\captcha\Captcha::checkRequirements()
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Object.php(107): yii\captcha\Captcha->init()
+#2 [internal function]: yii\base\Object->__construct(Array)
+#3 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/di/Container.php(374): ReflectionClass->newInstanceArgs(Array)
+#4 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/di/Container.php(153): yii\di\Container->build('yii\\captcha\\Cap...', Array, Array)
+#5 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('yii\\captcha\\Cap...', Array, Array)
+#6 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Widget.php(97): yii\BaseYii::createObject(Array)
+#7 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/widgets/ActiveField.php(673): yii\base\Widget::widget(Array)
+#8 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/views/site/contact.php(41): yii\widgets\ActiveField->widget('yii\\captcha\\Cap...', Array)
+#9 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/View.php(325): require('/Users/HuangJun...')
+#10 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Users/HuangJun...', Array)
+#11 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/Users/HuangJun...', Array, Object(app\controllers\SiteController))
+#12 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Controller.php(378): yii\base\View->render('contact', Array, Object(app\controllers\SiteController))
+#13 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/controllers/SiteController.php(112): yii\base\Controller->render('contact', Array)
+#14 [internal function]: app\controllers\SiteController->actionContact()
+#15 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#16 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#17 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('contact', Array)
+#18 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/contact', Array)
+#19 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#21 {main}
+2016-05-15 10:14:14 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => '60ec5d162bc38d30d1852b63ac54366d6aa8953fe23c3b28c3950c578f423689a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7ecwX8nqZEolHrfQLUGkqA33FY8XxJeG\";}'
+    'PHPSESSID' => 'f3g94q0eamb6pcpr63rjgdgiu1'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf=60ec5d162bc38d30d1852b63ac54366d6aa8953fe23c3b28c3950c578f423689a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227ecwX8nqZEolHrfQLUGkqA33FY8XxJeG%22%3B%7D; PHPSESSID=f3g94q0eamb6pcpr63rjgdgiu1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/signup'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.27'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '56048'
+    'REDIRECT_URL' => '/nenadyiibasic/contact'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/contact'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463321654.84
+    'REQUEST_TIME' => 1463321654
+]
+2016-05-16 11:35:14 [::1][-][vdb6cpnj50akbm47gbagre0ms2][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Connection refused' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Connection.php:600
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Connection.php(600): PDO->__construct('mysql:host=127....', 'root', 'password', NULL)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Connection.php(542): yii\db\Connection->createPdoInstance()
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Connection.php(861): yii\db\Connection->open()
+#3 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Connection.php(848): yii\db\Connection->getMasterPdo()
+#4 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Schema.php(480): yii\db\Connection->getSlavePdo()
+#5 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Connection.php(757): yii\db\Schema->quoteValue('<span class="st...')
+#6 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Command.php(175): yii\db\Connection->quoteValue('<span class="st...')
+#7 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Command.php(869): yii\db\Command->getRawSql()
+#8 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#9 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Query.php(247): yii\db\Command->queryOne()
+#10 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/ActiveQuery.php(290): yii\db\Query->one('<span class="ke...')
+#11 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#12 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/models/User.php(154): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#13 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/models/LoginForm.php(114): app\models\User::findByUsername('<span class="st...')
+#14 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/models/LoginForm.php(128): app\models\LoginForm->findUser()
+#15 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/models/LoginForm.php(54): app\models\LoginForm->getUser()
+#16 [internal function]: app\models\LoginForm->validatePassword('<span class="st...', '<span class="ke...')
+#17 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/validators/InlineValidator.php(69): call_user_func('[<span class="t...', '<span class="st...', '<span class="ke...')
+#18 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/validators/Validator.php(252): yii\validators\InlineValidator->validateAttribute(Object(app\models\LoginForm), '<span class="st...')
+#19 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Model.php(356): yii\validators\Validator->validateAttributes(Object(app\models\LoginForm), '[<span class="s...')
+#20 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/models/LoginForm.php(86): yii\base\Model->validate()
+#21 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/controllers/SiteController.php(153): app\models\LoginForm->login()
+#22 [internal function]: app\controllers\SiteController->actionLogin()
+#23 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#24 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams('[]')
+#25 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#26 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#27 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#29 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] Connection refused' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Connection.php:547
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Connection.php(861): yii\db\Connection->open()
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Connection.php(848): yii\db\Connection->getMasterPdo()
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Schema.php(480): yii\db\Connection->getSlavePdo()
+#3 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Connection.php(757): yii\db\Schema->quoteValue('<span class="st...')
+#4 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Command.php(175): yii\db\Connection->quoteValue('<span class="st...')
+#5 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Command.php(869): yii\db\Command->getRawSql()
+#6 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/Query.php(247): yii\db\Command->queryOne()
+#8 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/ActiveQuery.php(290): yii\db\Query->one('<span class="ke...')
+#9 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/db/BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#10 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/models/User.php(154): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#11 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/models/LoginForm.php(114): app\models\User::findByUsername('<span class="st...')
+#12 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/models/LoginForm.php(128): app\models\LoginForm->findUser()
+#13 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/models/LoginForm.php(54): app\models\LoginForm->getUser()
+#14 [internal function]: app\models\LoginForm->validatePassword('<span class="st...', '<span class="ke...')
+#15 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/validators/InlineValidator.php(69): call_user_func('[<span class="t...', '<span class="st...', '<span class="ke...')
+#16 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/validators/Validator.php(252): yii\validators\InlineValidator->validateAttribute(Object(app\models\LoginForm), '<span class="st...')
+#17 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Model.php(356): yii\validators\Validator->validateAttributes(Object(app\models\LoginForm), '[<span class="s...')
+#18 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/models/LoginForm.php(86): yii\base\Model->validate()
+#19 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/controllers/SiteController.php(153): app\models\LoginForm->login()
+#20 [internal function]: app\controllers\SiteController->actionLogin()
+#21 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#22 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams('[]')
+#23 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#24 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#25 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#26 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#27 {main}
+Additional Information:
+
+2016-05-16 11:35:14 [::1][-][vdb6cpnj50akbm47gbagre0ms2][info][application] $_POST = [
+    '_csrf' => 'SWpiWDlnWkIOIFYZTCkoATo8IxltN2p6HC8wFw0iCikQR1IedC9idg=='
+    'LoginForm' => [
+        'username' => 'test'
+        'password' => 'password'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    '_csrf' => '5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GJ4AuNrCsVAATP08UERO4EPkY-0FMH84\";}'
+    'PHPSESSID' => 'vdb6cpnj50akbm47gbagre0ms2'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_COOKIE' => '_csrf=5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GJ4AuNrCsVAATP08UERO4EPkY-0FMH84%22%3B%7D; PHPSESSID=vdb6cpnj50akbm47gbagre0ms2'
+    'CONTENT_LENGTH' => '198'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/login'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '49286'
+    'REDIRECT_URL' => '/nenadyiibasic/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/login'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463398514.713
+    'REQUEST_TIME' => 1463398514
+]
+2016-05-21 04:21:52 [::1][-][vdb6cpnj50akbm47gbagre0ms2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "css/modern-business.css".' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('css/modern-busi...', Array)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#2 {main}
+2016-05-21 04:21:52 [::1][-][vdb6cpnj50akbm47gbagre0ms2][info][application] $_COOKIE = [
+    '_csrf' => '5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GJ4AuNrCsVAATP08UERO4EPkY-0FMH84\";}'
+    'PHPSESSID' => 'vdb6cpnj50akbm47gbagre0ms2'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT' => 'text/css,*/*;q=0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf=5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GJ4AuNrCsVAATP08UERO4EPkY-0FMH84%22%3B%7D; PHPSESSID=vdb6cpnj50akbm47gbagre0ms2'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '55418'
+    'REDIRECT_URL' => '/nenadyiibasic/css/modern-business.css'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/css/modern-business.css'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463804512.735
+    'REQUEST_TIME' => 1463804512
+]
+2016-05-21 04:21:52 [::1][-][vdb6cpnj50akbm47gbagre0ms2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('js/bootstrap.mi...', Array)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#2 {main}
+2016-05-21 04:21:52 [::1][-][vdb6cpnj50akbm47gbagre0ms2][info][application] $_COOKIE = [
+    '_csrf' => '5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GJ4AuNrCsVAATP08UERO4EPkY-0FMH84\";}'
+    'PHPSESSID' => 'vdb6cpnj50akbm47gbagre0ms2'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf=5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GJ4AuNrCsVAATP08UERO4EPkY-0FMH84%22%3B%7D; PHPSESSID=vdb6cpnj50akbm47gbagre0ms2'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '55416'
+    'REDIRECT_URL' => '/nenadyiibasic/js/bootstrap.min.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/js/bootstrap.min.js'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463804512.734
+    'REQUEST_TIME' => 1463804512
+]
+2016-05-21 04:21:52 [::1][-][vdb6cpnj50akbm47gbagre0ms2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "font-awesome/css/font-awesome.min.css".' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('font-awesome/cs...', Array)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#2 {main}
+2016-05-21 04:21:52 [::1][-][vdb6cpnj50akbm47gbagre0ms2][info][application] $_COOKIE = [
+    '_csrf' => '5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GJ4AuNrCsVAATP08UERO4EPkY-0FMH84\";}'
+    'PHPSESSID' => 'vdb6cpnj50akbm47gbagre0ms2'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT' => 'text/css,*/*;q=0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf=5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GJ4AuNrCsVAATP08UERO4EPkY-0FMH84%22%3B%7D; PHPSESSID=vdb6cpnj50akbm47gbagre0ms2'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '55417'
+    'REDIRECT_URL' => '/nenadyiibasic/font-awesome/css/font-awesome.min.css'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/font-awesome/css/font-awesome.min.css'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463804512.731
+    'REQUEST_TIME' => 1463804512
+]
+2016-05-21 04:21:52 [::1][-][vdb6cpnj50akbm47gbagre0ms2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "css/bootstrap.min.css".' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('css/bootstrap.m...', Array)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#2 {main}
+2016-05-21 04:21:52 [::1][-][vdb6cpnj50akbm47gbagre0ms2][info][application] $_COOKIE = [
+    '_csrf' => '5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GJ4AuNrCsVAATP08UERO4EPkY-0FMH84\";}'
+    'PHPSESSID' => 'vdb6cpnj50akbm47gbagre0ms2'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT' => 'text/css,*/*;q=0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf=5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GJ4AuNrCsVAATP08UERO4EPkY-0FMH84%22%3B%7D; PHPSESSID=vdb6cpnj50akbm47gbagre0ms2'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '55419'
+    'REDIRECT_URL' => '/nenadyiibasic/css/bootstrap.min.css'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/css/bootstrap.min.css'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463804512.736
+    'REQUEST_TIME' => 1463804512
+]
+2016-05-21 04:21:52 [::1][-][vdb6cpnj50akbm47gbagre0ms2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/jquery.js".' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('js/jquery.js', Array)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#2 {main}
+2016-05-21 04:21:52 [::1][-][vdb6cpnj50akbm47gbagre0ms2][info][application] $_COOKIE = [
+    '_csrf' => '5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GJ4AuNrCsVAATP08UERO4EPkY-0FMH84\";}'
+    'PHPSESSID' => 'vdb6cpnj50akbm47gbagre0ms2'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf=5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GJ4AuNrCsVAATP08UERO4EPkY-0FMH84%22%3B%7D; PHPSESSID=vdb6cpnj50akbm47gbagre0ms2'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '55415'
+    'REDIRECT_URL' => '/nenadyiibasic/js/jquery.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/js/jquery.js'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463804512.846
+    'REQUEST_TIME' => 1463804512
+]
+2016-05-21 04:22:13 [::1][-][vdb6cpnj50akbm47gbagre0ms2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "css/modern-business.css".' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('css/modern-busi...', Array)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#2 {main}
+2016-05-21 04:22:13 [::1][-][vdb6cpnj50akbm47gbagre0ms2][info][application] $_COOKIE = [
+    '_csrf' => '5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GJ4AuNrCsVAATP08UERO4EPkY-0FMH84\";}'
+    'PHPSESSID' => 'vdb6cpnj50akbm47gbagre0ms2'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GJ4AuNrCsVAATP08UERO4EPkY-0FMH84%22%3B%7D; PHPSESSID=vdb6cpnj50akbm47gbagre0ms2'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/css,*/*;q=0.1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '55429'
+    'REDIRECT_URL' => '/nenadyiibasic/css/modern-business.css'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/css/modern-business.css'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463804533.71
+    'REQUEST_TIME' => 1463804533
+]
+2016-05-21 04:22:13 [::1][-][vdb6cpnj50akbm47gbagre0ms2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "font-awesome/css/font-awesome.min.css".' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('font-awesome/cs...', Array)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#2 {main}
+2016-05-21 04:22:13 [::1][-][vdb6cpnj50akbm47gbagre0ms2][info][application] $_COOKIE = [
+    '_csrf' => '5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GJ4AuNrCsVAATP08UERO4EPkY-0FMH84\";}'
+    'PHPSESSID' => 'vdb6cpnj50akbm47gbagre0ms2'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GJ4AuNrCsVAATP08UERO4EPkY-0FMH84%22%3B%7D; PHPSESSID=vdb6cpnj50akbm47gbagre0ms2'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/css,*/*;q=0.1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '55430'
+    'REDIRECT_URL' => '/nenadyiibasic/font-awesome/css/font-awesome.min.css'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/font-awesome/css/font-awesome.min.css'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463804533.712
+    'REQUEST_TIME' => 1463804533
+]
+2016-05-21 04:22:13 [::1][-][vdb6cpnj50akbm47gbagre0ms2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "css/bootstrap.min.css".' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('css/bootstrap.m...', Array)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#2 {main}
+2016-05-21 04:22:13 [::1][-][vdb6cpnj50akbm47gbagre0ms2][info][application] $_COOKIE = [
+    '_csrf' => '5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GJ4AuNrCsVAATP08UERO4EPkY-0FMH84\";}'
+    'PHPSESSID' => 'vdb6cpnj50akbm47gbagre0ms2'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GJ4AuNrCsVAATP08UERO4EPkY-0FMH84%22%3B%7D; PHPSESSID=vdb6cpnj50akbm47gbagre0ms2'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/css,*/*;q=0.1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '55427'
+    'REDIRECT_URL' => '/nenadyiibasic/css/bootstrap.min.css'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/css/bootstrap.min.css'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463804533.71
+    'REQUEST_TIME' => 1463804533
+]
+2016-05-21 04:22:13 [::1][-][vdb6cpnj50akbm47gbagre0ms2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/jquery.js".' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('js/jquery.js', Array)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#2 {main}
+2016-05-21 04:22:13 [::1][-][vdb6cpnj50akbm47gbagre0ms2][info][application] $_COOKIE = [
+    '_csrf' => '5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GJ4AuNrCsVAATP08UERO4EPkY-0FMH84\";}'
+    'PHPSESSID' => 'vdb6cpnj50akbm47gbagre0ms2'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GJ4AuNrCsVAATP08UERO4EPkY-0FMH84%22%3B%7D; PHPSESSID=vdb6cpnj50akbm47gbagre0ms2'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '55426'
+    'REDIRECT_URL' => '/nenadyiibasic/js/jquery.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/js/jquery.js'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463804533.716
+    'REQUEST_TIME' => 1463804533
+]
+2016-05-21 04:22:13 [::1][-][vdb6cpnj50akbm47gbagre0ms2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('js/bootstrap.mi...', Array)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#2 {main}
+2016-05-21 04:22:13 [::1][-][vdb6cpnj50akbm47gbagre0ms2][info][application] $_COOKIE = [
+    '_csrf' => '5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GJ4AuNrCsVAATP08UERO4EPkY-0FMH84\";}'
+    'PHPSESSID' => 'vdb6cpnj50akbm47gbagre0ms2'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GJ4AuNrCsVAATP08UERO4EPkY-0FMH84%22%3B%7D; PHPSESSID=vdb6cpnj50akbm47gbagre0ms2'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '55428'
+    'REDIRECT_URL' => '/nenadyiibasic/js/bootstrap.min.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/js/bootstrap.min.js'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463804533.722
+    'REQUEST_TIME' => 1463804533
+]
+2016-05-21 04:23:49 [::1][-][vdb6cpnj50akbm47gbagre0ms2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/jquery.js".' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('js/jquery.js', Array)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#2 {main}
+2016-05-21 04:23:49 [::1][-][vdb6cpnj50akbm47gbagre0ms2][info][application] $_COOKIE = [
+    '_csrf' => '5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GJ4AuNrCsVAATP08UERO4EPkY-0FMH84\";}'
+    'PHPSESSID' => 'vdb6cpnj50akbm47gbagre0ms2'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GJ4AuNrCsVAATP08UERO4EPkY-0FMH84%22%3B%7D; PHPSESSID=vdb6cpnj50akbm47gbagre0ms2'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '55434'
+    'REDIRECT_URL' => '/nenadyiibasic/js/jquery.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/js/jquery.js'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463804629.359
+    'REQUEST_TIME' => 1463804629
+]
+2016-05-21 04:23:49 [::1][-][vdb6cpnj50akbm47gbagre0ms2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('js/bootstrap.mi...', Array)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#2 {main}
+2016-05-21 04:23:49 [::1][-][vdb6cpnj50akbm47gbagre0ms2][info][application] $_COOKIE = [
+    '_csrf' => '5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GJ4AuNrCsVAATP08UERO4EPkY-0FMH84\";}'
+    'PHPSESSID' => 'vdb6cpnj50akbm47gbagre0ms2'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GJ4AuNrCsVAATP08UERO4EPkY-0FMH84%22%3B%7D; PHPSESSID=vdb6cpnj50akbm47gbagre0ms2'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '55435'
+    'REDIRECT_URL' => '/nenadyiibasic/js/bootstrap.min.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/js/bootstrap.min.js'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463804629.369
+    'REQUEST_TIME' => 1463804629
+]
+2016-05-21 04:24:24 [127.0.0.1][-][vdb6cpnj50akbm47gbagre0ms2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/jquery.js".' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('js/jquery.js', Array)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#2 {main}
+2016-05-21 04:24:24 [127.0.0.1][-][vdb6cpnj50akbm47gbagre0ms2][info][application] $_COOKIE = [
+    '_csrf' => '5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GJ4AuNrCsVAATP08UERO4EPkY-0FMH84\";}'
+    'PHPSESSID' => 'vdb6cpnj50akbm47gbagre0ms2'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GJ4AuNrCsVAATP08UERO4EPkY-0FMH84%22%3B%7D; PHPSESSID=vdb6cpnj50akbm47gbagre0ms2'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '55471'
+    'REDIRECT_URL' => '/nenadyiibasic/js/jquery.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/js/jquery.js'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463804664.575
+    'REQUEST_TIME' => 1463804664
+]
+2016-05-21 04:24:24 [127.0.0.1][-][vdb6cpnj50akbm47gbagre0ms2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('js/bootstrap.mi...', Array)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#2 {main}
+2016-05-21 04:24:24 [127.0.0.1][-][vdb6cpnj50akbm47gbagre0ms2][info][application] $_COOKIE = [
+    '_csrf' => '5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GJ4AuNrCsVAATP08UERO4EPkY-0FMH84\";}'
+    'PHPSESSID' => 'vdb6cpnj50akbm47gbagre0ms2'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GJ4AuNrCsVAATP08UERO4EPkY-0FMH84%22%3B%7D; PHPSESSID=vdb6cpnj50akbm47gbagre0ms2'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '55472'
+    'REDIRECT_URL' => '/nenadyiibasic/js/bootstrap.min.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/js/bootstrap.min.js'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463804664.593
+    'REQUEST_TIME' => 1463804664
+]
+2016-05-21 04:24:24 [127.0.0.1][-][vdb6cpnj50akbm47gbagre0ms2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "font-awesome/css/font-awesome.min.css".' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('font-awesome/cs...', Array)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#2 {main}
+2016-05-21 04:24:24 [127.0.0.1][-][vdb6cpnj50akbm47gbagre0ms2][info][application] $_COOKIE = [
+    '_csrf' => '5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GJ4AuNrCsVAATP08UERO4EPkY-0FMH84\";}'
+    'PHPSESSID' => 'vdb6cpnj50akbm47gbagre0ms2'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GJ4AuNrCsVAATP08UERO4EPkY-0FMH84%22%3B%7D; PHPSESSID=vdb6cpnj50akbm47gbagre0ms2'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/css,*/*;q=0.1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '55476'
+    'REDIRECT_URL' => '/nenadyiibasic/font-awesome/css/font-awesome.min.css'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/font-awesome/css/font-awesome.min.css'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463804664.587
+    'REQUEST_TIME' => 1463804664
+]
+2016-05-21 04:24:24 [127.0.0.1][-][vdb6cpnj50akbm47gbagre0ms2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "css/bootstrap.min.css".' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('css/bootstrap.m...', Array)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#2 {main}
+2016-05-21 04:24:24 [127.0.0.1][-][vdb6cpnj50akbm47gbagre0ms2][info][application] $_COOKIE = [
+    '_csrf' => '5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GJ4AuNrCsVAATP08UERO4EPkY-0FMH84\";}'
+    'PHPSESSID' => 'vdb6cpnj50akbm47gbagre0ms2'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GJ4AuNrCsVAATP08UERO4EPkY-0FMH84%22%3B%7D; PHPSESSID=vdb6cpnj50akbm47gbagre0ms2'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/css,*/*;q=0.1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '55473'
+    'REDIRECT_URL' => '/nenadyiibasic/css/bootstrap.min.css'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/css/bootstrap.min.css'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463804664.581
+    'REQUEST_TIME' => 1463804664
+]
+2016-05-21 04:24:40 [127.0.0.1][-][vdb6cpnj50akbm47gbagre0ms2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/jquery.js".' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('js/jquery.js', Array)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#2 {main}
+2016-05-21 04:24:40 [127.0.0.1][-][vdb6cpnj50akbm47gbagre0ms2][info][application] $_COOKIE = [
+    '_csrf' => '5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GJ4AuNrCsVAATP08UERO4EPkY-0FMH84\";}'
+    'PHPSESSID' => 'vdb6cpnj50akbm47gbagre0ms2'
+    'redux_blast' => '1463804669'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GJ4AuNrCsVAATP08UERO4EPkY-0FMH84%22%3B%7D; PHPSESSID=vdb6cpnj50akbm47gbagre0ms2; redux_blast=1463804669'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '55482'
+    'REDIRECT_URL' => '/nenadyiibasic/js/jquery.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/js/jquery.js'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463804680.445
+    'REQUEST_TIME' => 1463804680
+]
+2016-05-21 04:24:40 [127.0.0.1][-][vdb6cpnj50akbm47gbagre0ms2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('js/bootstrap.mi...', Array)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#2 {main}
+2016-05-21 04:24:40 [127.0.0.1][-][vdb6cpnj50akbm47gbagre0ms2][info][application] $_COOKIE = [
+    '_csrf' => '5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GJ4AuNrCsVAATP08UERO4EPkY-0FMH84\";}'
+    'PHPSESSID' => 'vdb6cpnj50akbm47gbagre0ms2'
+    'redux_blast' => '1463804669'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GJ4AuNrCsVAATP08UERO4EPkY-0FMH84%22%3B%7D; PHPSESSID=vdb6cpnj50akbm47gbagre0ms2; redux_blast=1463804669'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '55484'
+    'REDIRECT_URL' => '/nenadyiibasic/js/bootstrap.min.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/js/bootstrap.min.js'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463804680.456
+    'REQUEST_TIME' => 1463804680
+]
+2016-05-21 04:25:44 [127.0.0.1][-][vdb6cpnj50akbm47gbagre0ms2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/jquery.js".' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('js/jquery.js', Array)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#2 {main}
+2016-05-21 04:25:44 [127.0.0.1][-][vdb6cpnj50akbm47gbagre0ms2][info][application] $_COOKIE = [
+    '_csrf' => '5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GJ4AuNrCsVAATP08UERO4EPkY-0FMH84\";}'
+    'PHPSESSID' => 'vdb6cpnj50akbm47gbagre0ms2'
+    'redux_blast' => '1463804669'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GJ4AuNrCsVAATP08UERO4EPkY-0FMH84%22%3B%7D; PHPSESSID=vdb6cpnj50akbm47gbagre0ms2; redux_blast=1463804669'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '55491'
+    'REDIRECT_URL' => '/nenadyiibasic/js/jquery.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/js/jquery.js'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463804744.711
+    'REQUEST_TIME' => 1463804744
+]
+2016-05-21 04:25:44 [127.0.0.1][-][vdb6cpnj50akbm47gbagre0ms2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('js/bootstrap.mi...', Array)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#2 {main}
+2016-05-21 04:25:44 [127.0.0.1][-][vdb6cpnj50akbm47gbagre0ms2][info][application] $_COOKIE = [
+    '_csrf' => '5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GJ4AuNrCsVAATP08UERO4EPkY-0FMH84\";}'
+    'PHPSESSID' => 'vdb6cpnj50akbm47gbagre0ms2'
+    'redux_blast' => '1463804669'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GJ4AuNrCsVAATP08UERO4EPkY-0FMH84%22%3B%7D; PHPSESSID=vdb6cpnj50akbm47gbagre0ms2; redux_blast=1463804669'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '55492'
+    'REDIRECT_URL' => '/nenadyiibasic/js/bootstrap.min.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/js/bootstrap.min.js'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463804744.724
+    'REQUEST_TIME' => 1463804744
+]
+2016-05-21 04:26:05 [127.0.0.1][-][vdb6cpnj50akbm47gbagre0ms2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('js/bootstrap.mi...', Array)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#2 {main}
+2016-05-21 04:26:05 [127.0.0.1][-][vdb6cpnj50akbm47gbagre0ms2][info][application] $_COOKIE = [
+    '_csrf' => '5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GJ4AuNrCsVAATP08UERO4EPkY-0FMH84\";}'
+    'PHPSESSID' => 'vdb6cpnj50akbm47gbagre0ms2'
+    'redux_blast' => '1463804669'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GJ4AuNrCsVAATP08UERO4EPkY-0FMH84%22%3B%7D; PHPSESSID=vdb6cpnj50akbm47gbagre0ms2; redux_blast=1463804669'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '55506'
+    'REDIRECT_URL' => '/nenadyiibasic/js/bootstrap.min.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/js/bootstrap.min.js'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463804765.886
+    'REQUEST_TIME' => 1463804765
+]
+2016-05-21 04:26:05 [127.0.0.1][-][vdb6cpnj50akbm47gbagre0ms2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/jquery.js".' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('js/jquery.js', Array)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#2 {main}
+2016-05-21 04:26:05 [127.0.0.1][-][vdb6cpnj50akbm47gbagre0ms2][info][application] $_COOKIE = [
+    '_csrf' => '5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GJ4AuNrCsVAATP08UERO4EPkY-0FMH84\";}'
+    'PHPSESSID' => 'vdb6cpnj50akbm47gbagre0ms2'
+    'redux_blast' => '1463804669'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GJ4AuNrCsVAATP08UERO4EPkY-0FMH84%22%3B%7D; PHPSESSID=vdb6cpnj50akbm47gbagre0ms2; redux_blast=1463804669'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '55507'
+    'REDIRECT_URL' => '/nenadyiibasic/js/jquery.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/js/jquery.js'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463804765.886
+    'REQUEST_TIME' => 1463804765
+]
+2016-05-21 04:26:30 [127.0.0.1][-][vdb6cpnj50akbm47gbagre0ms2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/jquery.js".' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('js/jquery.js', Array)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#2 {main}
+2016-05-21 04:26:30 [127.0.0.1][-][vdb6cpnj50akbm47gbagre0ms2][info][application] $_COOKIE = [
+    '_csrf' => '5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GJ4AuNrCsVAATP08UERO4EPkY-0FMH84\";}'
+    'PHPSESSID' => 'vdb6cpnj50akbm47gbagre0ms2'
+    'redux_blast' => '1463804669'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GJ4AuNrCsVAATP08UERO4EPkY-0FMH84%22%3B%7D; PHPSESSID=vdb6cpnj50akbm47gbagre0ms2; redux_blast=1463804669'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '55514'
+    'REDIRECT_URL' => '/nenadyiibasic/js/jquery.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/js/jquery.js'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463804790.063
+    'REQUEST_TIME' => 1463804790
+]
+2016-05-21 04:26:30 [127.0.0.1][-][vdb6cpnj50akbm47gbagre0ms2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('js/bootstrap.mi...', Array)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#2 {main}
+2016-05-21 04:26:30 [127.0.0.1][-][vdb6cpnj50akbm47gbagre0ms2][info][application] $_COOKIE = [
+    '_csrf' => '5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GJ4AuNrCsVAATP08UERO4EPkY-0FMH84\";}'
+    'PHPSESSID' => 'vdb6cpnj50akbm47gbagre0ms2'
+    'redux_blast' => '1463804669'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GJ4AuNrCsVAATP08UERO4EPkY-0FMH84%22%3B%7D; PHPSESSID=vdb6cpnj50akbm47gbagre0ms2; redux_blast=1463804669'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '55510'
+    'REDIRECT_URL' => '/nenadyiibasic/js/bootstrap.min.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/js/bootstrap.min.js'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463804790.056
+    'REQUEST_TIME' => 1463804790
+]
+2016-05-21 04:26:56 [127.0.0.1][-][vdb6cpnj50akbm47gbagre0ms2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('js/bootstrap.mi...', Array)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#2 {main}
+2016-05-21 04:26:56 [127.0.0.1][-][vdb6cpnj50akbm47gbagre0ms2][info][application] $_COOKIE = [
+    '_csrf' => '5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GJ4AuNrCsVAATP08UERO4EPkY-0FMH84\";}'
+    'PHPSESSID' => 'vdb6cpnj50akbm47gbagre0ms2'
+    'redux_blast' => '1463804669'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GJ4AuNrCsVAATP08UERO4EPkY-0FMH84%22%3B%7D; PHPSESSID=vdb6cpnj50akbm47gbagre0ms2; redux_blast=1463804669'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '55519'
+    'REDIRECT_URL' => '/nenadyiibasic/js/bootstrap.min.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/js/bootstrap.min.js'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463804816.116
+    'REQUEST_TIME' => 1463804816
+]
+2016-05-21 04:26:56 [127.0.0.1][-][vdb6cpnj50akbm47gbagre0ms2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/jquery.js".' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('js/jquery.js', Array)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#2 {main}
+2016-05-21 04:26:56 [127.0.0.1][-][vdb6cpnj50akbm47gbagre0ms2][info][application] $_COOKIE = [
+    '_csrf' => '5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GJ4AuNrCsVAATP08UERO4EPkY-0FMH84\";}'
+    'PHPSESSID' => 'vdb6cpnj50akbm47gbagre0ms2'
+    'redux_blast' => '1463804669'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GJ4AuNrCsVAATP08UERO4EPkY-0FMH84%22%3B%7D; PHPSESSID=vdb6cpnj50akbm47gbagre0ms2; redux_blast=1463804669'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '55524'
+    'REDIRECT_URL' => '/nenadyiibasic/js/jquery.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/js/jquery.js'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463804816.127
+    'REQUEST_TIME' => 1463804816
+]
+2016-05-21 04:27:08 [127.0.0.1][-][vdb6cpnj50akbm47gbagre0ms2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('js/bootstrap.mi...', Array)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#2 {main}
+2016-05-21 04:27:08 [127.0.0.1][-][vdb6cpnj50akbm47gbagre0ms2][info][application] $_COOKIE = [
+    '_csrf' => '5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GJ4AuNrCsVAATP08UERO4EPkY-0FMH84\";}'
+    'PHPSESSID' => 'vdb6cpnj50akbm47gbagre0ms2'
+    'redux_blast' => '1463804669'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GJ4AuNrCsVAATP08UERO4EPkY-0FMH84%22%3B%7D; PHPSESSID=vdb6cpnj50akbm47gbagre0ms2; redux_blast=1463804669'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '55527'
+    'REDIRECT_URL' => '/nenadyiibasic/js/bootstrap.min.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/js/bootstrap.min.js'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463804828.803
+    'REQUEST_TIME' => 1463804828
+]
+2016-05-21 04:27:08 [127.0.0.1][-][vdb6cpnj50akbm47gbagre0ms2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/jquery.js".' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('js/jquery.js', Array)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#2 {main}
+2016-05-21 04:27:08 [127.0.0.1][-][vdb6cpnj50akbm47gbagre0ms2][info][application] $_COOKIE = [
+    '_csrf' => '5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GJ4AuNrCsVAATP08UERO4EPkY-0FMH84\";}'
+    'PHPSESSID' => 'vdb6cpnj50akbm47gbagre0ms2'
+    'redux_blast' => '1463804669'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GJ4AuNrCsVAATP08UERO4EPkY-0FMH84%22%3B%7D; PHPSESSID=vdb6cpnj50akbm47gbagre0ms2; redux_blast=1463804669'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '55532'
+    'REDIRECT_URL' => '/nenadyiibasic/js/jquery.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/js/jquery.js'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463804828.811
+    'REQUEST_TIME' => 1463804828
+]
+2016-05-21 05:44:35 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '?>'' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/views/layouts/main.php:85
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-05-21 05:44:35 [::1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'sd14k0ej0u4n8civ9b96abpb66'
+    '_csrf' => '5a75a6781f893814077c999a08fca87b4a95eff9e8a6a73d75c9f6b5198e6daca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Wib5nddteGOug3JSrCXgkX4pT8rbmh_t\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=sd14k0ej0u4n8civ9b96abpb66; _csrf=5a75a6781f893814077c999a08fca87b4a95eff9e8a6a73d75c9f6b5198e6daca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Wib5nddteGOug3JSrCXgkX4pT8rbmh_t%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '55631'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463809475.146
+    'REQUEST_TIME' => 1463809475
+]
+2016-05-21 06:31:12 [::1][-][sd14k0ej0u4n8civ9b96abpb66][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "themes/light/css/modern-business.css".' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('themes/light/cs...', Array)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#2 {main}
+2016-05-21 06:31:12 [::1][-][sd14k0ej0u4n8civ9b96abpb66][info][application] $_COOKIE = [
+    'PHPSESSID' => 'sd14k0ej0u4n8civ9b96abpb66'
+    '_csrf' => '5a75a6781f893814077c999a08fca87b4a95eff9e8a6a73d75c9f6b5198e6daca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Wib5nddteGOug3JSrCXgkX4pT8rbmh_t\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/css,*/*;q=0.1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=sd14k0ej0u4n8civ9b96abpb66; _csrf=5a75a6781f893814077c999a08fca87b4a95eff9e8a6a73d75c9f6b5198e6daca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Wib5nddteGOug3JSrCXgkX4pT8rbmh_t%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '56332'
+    'REDIRECT_URL' => '/nenadyiibasic/themes/light/css/modern-business.css'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/themes/light/css/modern-business.css'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463812272.083
+    'REQUEST_TIME' => 1463812272
+]
+2016-05-21 06:31:13 [::1][-][sd14k0ej0u4n8civ9b96abpb66][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "themes/light/css/modern-business.css".' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('themes/light/cs...', Array)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#2 {main}
+2016-05-21 06:31:13 [::1][-][sd14k0ej0u4n8civ9b96abpb66][info][application] $_COOKIE = [
+    'PHPSESSID' => 'sd14k0ej0u4n8civ9b96abpb66'
+    '_csrf' => '5a75a6781f893814077c999a08fca87b4a95eff9e8a6a73d75c9f6b5198e6daca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Wib5nddteGOug3JSrCXgkX4pT8rbmh_t\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/css,*/*;q=0.1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=sd14k0ej0u4n8civ9b96abpb66; _csrf=5a75a6781f893814077c999a08fca87b4a95eff9e8a6a73d75c9f6b5198e6daca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Wib5nddteGOug3JSrCXgkX4pT8rbmh_t%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '56332'
+    'REDIRECT_URL' => '/nenadyiibasic/themes/light/css/modern-business.css'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/themes/light/css/modern-business.css'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463812273.425
+    'REQUEST_TIME' => 1463812273
+]
+2016-05-21 06:35:31 [::1][-][vdb6cpnj50akbm47gbagre0ms2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "themes/light/js/bootstrap.min.css".' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('themes/light/js...', Array)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#2 {main}
+2016-05-21 06:35:31 [::1][-][vdb6cpnj50akbm47gbagre0ms2][info][application] $_COOKIE = [
+    '_csrf' => '5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GJ4AuNrCsVAATP08UERO4EPkY-0FMH84\";}'
+    'PHPSESSID' => 'vdb6cpnj50akbm47gbagre0ms2'
+    'redux_blast' => '1463804669'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'klrerus'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GJ4AuNrCsVAATP08UERO4EPkY-0FMH84%22%3B%7D; PHPSESSID=vdb6cpnj50akbm47gbagre0ms2; redux_blast=1463804669'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/index'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '56371'
+    'REDIRECT_URL' => '/nenadyiibasic/themes/light/js/bootstrap.min.css'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/themes/light/js/bootstrap.min.css'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463812531.521
+    'REQUEST_TIME' => 1463812531
+]
+2016-05-21 06:35:31 [::1][-][vdb6cpnj50akbm47gbagre0ms2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "themes/light/js/bootstrap.css".' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('themes/light/js...', Array)
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Users/HuangJunqi/Sites/nenadyiibasic/_protected/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/HuangJunqi/Sites/nenadyiibasic/index.php(12): yii\base\Application->run()
+#2 {main}
+2016-05-21 06:35:31 [::1][-][vdb6cpnj50akbm47gbagre0ms2][info][application] $_COOKIE = [
+    '_csrf' => '5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GJ4AuNrCsVAATP08UERO4EPkY-0FMH84\";}'
+    'PHPSESSID' => 'vdb6cpnj50akbm47gbagre0ms2'
+    'redux_blast' => '1463804669'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'klrerus'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=5d622c72168bc6f7d626e3a8a8b297eb0ad31f54a50469e2a41d77bad2316e57a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GJ4AuNrCsVAATP08UERO4EPkY-0FMH84%22%3B%7D; PHPSESSID=vdb6cpnj50akbm47gbagre0ms2; redux_blast=1463804669'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_REFERER' => 'http://localhost/nenadyiibasic/index'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) PHP/5.5.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/HuangJunqi/Sites'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/HuangJunqi/Sites/nenadyiibasic/index.php'
+    'REMOTE_PORT' => '56370'
+    'REDIRECT_URL' => '/nenadyiibasic/themes/light/js/bootstrap.css'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/nenadyiibasic/themes/light/js/bootstrap.css'
+    'SCRIPT_NAME' => '/nenadyiibasic/index.php'
+    'PHP_SELF' => '/nenadyiibasic/index.php'
+    'REQUEST_TIME_FLOAT' => 1463812531.534
+    'REQUEST_TIME' => 1463812531
+]
