@@ -36,14 +36,16 @@ class UserController extends AppController
 
     /**
      * Displays a single User model.
-     *
-     * @param  integer $id The user id.
+     *     
      * @return string
      *
      * @throws NotFoundHttpException
      */
-    public function actionView($id)
+    public function actionView()
     {
+    	// get the current logged in user ID
+    	$id = Yii::$app->user->identity->id;
+    	
         return $this->render('view', ['model' => $this->findModel($id)]);
     }
 
