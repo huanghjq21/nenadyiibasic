@@ -2,6 +2,8 @@
 use app\helpers\CssHelper;
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use yii\grid\GridView;
+use yii\widgets\ListView;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\User */
@@ -17,12 +19,13 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="pull-right">
             <?= Html::a(Yii::t('app', 'Back'), ['index'], ['class' => 'btn btn-warning']) ?>
             <?= Html::a(Yii::t('app', 'Update'), ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-            <?= Html::a(Yii::t('app', 'Delete'), ['delete', 'id' => $model->id], ['class' => 'btn btn-danger',
-                'data' => [
-                    'confirm' => Yii::t('app', 'Are you sure you want to delete this user?'),
-                    'method' => 'post',
-                ],
-            ]) ?>
+            <?php 
+//             Html::a(Yii::t('app', 'Delete'), ['delete', 'id' => $model->id], ['class' => 'btn btn-danger',
+//                 'data' => [
+//                     'confirm' => Yii::t('app', 'Are you sure you want to delete this user?'),
+//                     'method' => 'post',
+//                 ],
+//             ]) ?>
         </div>
     </h1>
 
@@ -54,5 +57,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'updated_at:date',
         ],
     ]) ?>
-
+    
+    <h1>Education Profile <div class="pull-right"><?= Html::a('Add', ['createEducationRecord'], ['class'=>'btn btn-primary']) ?></div></h1>
+	
 </div>

@@ -33,64 +33,68 @@ class RbacController extends Controller
      */
     public function actionInit()
     {
-        $auth = Yii::$app->authManager;
+//         $auth = Yii::$app->authManager;
 
-        //---------- RULES ----------//
+//         //---------- RULES ----------//
 
-        // add the rule (not used by default)
-        $rule = new AuthorRule;
-        $auth->add($rule);
+//         // add the rule (not used by default)
+//         $rule = new AuthorRule;
+//         $auth->add($rule);
 
-        //---------- PERMISSIONS ----------//
+//         //---------- PERMISSIONS ----------//
 
-        // add "usePremiumContent" permission
-        $usePremiumContent = $auth->createPermission('usePremiumContent');
-        $usePremiumContent->description = 'Allows premium+ roles to use premium content';
-        $auth->add($usePremiumContent);
+//         // add "usePremiumContent" permission
+//         $usePremiumContent = $auth->createPermission('usePremiumContent');
+//         $usePremiumContent->description = 'Allows premium+ roles to use premium content';
+//         $auth->add($usePremiumContent);
 
-        // add "manageUsers" permission
-        $manageUsers = $auth->createPermission('manageUsers');
-        $manageUsers->description = 'Allows admin+ roles to manage users';
-        $auth->add($manageUsers);
+//         // add "manageUsers" permission
+//         $manageUsers = $auth->createPermission('manageUsers');
+//         $manageUsers->description = 'Allows admin+ roles to manage users';
+//         $auth->add($manageUsers);
 
-        //---------- ROLES ----------//
+//         //---------- ROLES ----------//
 
-        // add "member" role
-        $member = $auth->createRole('member');
-        $member->description = 'Authenticated user, equal to "@"';
-        $auth->add($member); 
+//         // add "member" role
+//         $member = $auth->createRole('member');
+//         $member->description = 'Authenticated user, equal to "@"';
+//         $auth->add($member); 
 
-        // add "premium" role
-        $premium = $auth->createRole('premium');
-        $premium->description = 'Premium users. Authenticated users with extra powers';
-        $auth->add($premium); 
-        $auth->addChild($premium, $member);
-        $auth->addChild($premium, $usePremiumContent);
+//         // add "premium" role
+//         $premium = $auth->createRole('premium');
+//         $premium->description = 'Premium users. Authenticated users with extra powers';
+//         $auth->add($premium); 
+//         $auth->addChild($premium, $member);
+//         $auth->addChild($premium, $usePremiumContent);
 
-        // add "employee" role and give this role: 
-        // createArticle, updateOwnArticle and adminArticle permissions, plus premium role.
-        $employee = $auth->createRole('employee');
-        $employee->description = 'Employee of this site/company who has lower rights than admin';
-        $auth->add($employee);
-        $auth->addChild($employee, $premium);
+//         // add "employee" role and give this role: 
+//         // createArticle, updateOwnArticle and adminArticle permissions, plus premium role.
+//         $employee = $auth->createRole('employee');
+//         $employee->description = 'Employee of this site/company who has lower rights than admin';
+//         $auth->add($employee);
+//         $auth->addChild($employee, $premium);
 
-        // add "admin" role and give this role: 
-        // manageUsers, updateArticle adn deleteArticle permissions, plus employee role.
-        $admin = $auth->createRole('admin');
-        $admin->description = 'Administrator of this application';
-        $auth->add($admin);
-        $auth->addChild($admin, $employee);
-        $auth->addChild($admin, $manageUsers);
+//         // add "admin" role and give this role: 
+//         // manageUsers, updateArticle adn deleteArticle permissions, plus employee role.
+//         $admin = $auth->createRole('admin');
+//         $admin->description = 'Administrator of this application';
+//         $auth->add($admin);
+//         $auth->addChild($admin, $employee);
+//         $auth->addChild($admin, $manageUsers);
 
-        // add "theCreator" role ( this is you :) )
-        // You can do everything that admin can do plus more (if You decide so)
-        $theCreator = $auth->createRole('theCreator');
-        $theCreator->description = 'You!';
-        $auth->add($theCreator); 
-        $auth->addChild($theCreator, $admin);
+//         // add "theCreator" role ( this is you :) )
+//         // You can do everything that admin can do plus more (if You decide so)
+//         $theCreator = $auth->createRole('theCreator');
+//         $theCreator->description = 'You!';
+//         $auth->add($theCreator); 
+//         $auth->addChild($theCreator, $admin);
 
-        if ($auth) {
-            $this->stdout("\nRbac authorization data are installed successfully.\n", Console::FG_GREEN);
-        }
+//         if ($auth) {
+//             $this->stdout("\nRbac authorization data are installed successfully.\n", Console::FG_GREEN);
+//         }
+
+    		$auth = Yii::$app->authManager;
+    		$auth->init();
+    		$auth->assign('theCreator', 1);
     }
 }

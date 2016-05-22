@@ -2,6 +2,9 @@
 /* @var $this yii\web\View */
 
 $this->title = Yii::t('app', Yii::$app->name);
+
+use app\assets\FontAwesomeAsset;
+FontAwesomeAsset::register($this);
 ?>    	
 	
 	<!-- Header Carousel -->

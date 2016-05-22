@@ -23,17 +23,11 @@ class AppAsset extends AssetBundle
 
     public $css = [
         'css/bootstrap.min.css',
-        'css/style.css',
-    		
-    	'css/modern-business.css',
-    	'font-awesome/css/font-awesome.css',
-    	'font-awesome/css/font-awesome.min.css',
+        'css/style.css',    		
+    	'css/modern-business.css',    	
     ];
 
-    public $js = [
-    	'js/contact_me.js',
-    	'js/jqBootstrapValidation.js',
-    	'js/jquery.js',
+    public $js = [    	
     ];
 
     public $depends = [

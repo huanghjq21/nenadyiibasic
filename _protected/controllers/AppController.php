@@ -22,13 +22,13 @@ class AppController extends Controller
     {
         return [
             'access' => [
-                'class' => AccessControl::className(),
+                'class' => AccessControl::className(),            	
                 'rules' => [
                     [
                         'controllers' => ['user'],
                         'actions' => ['index', 'view', 'create', 'update', 'delete'],
                         'allow' => true,
-                        'roles' => ['theCreator', 'admin',''], 
+                        'roles' => ['@'], 
                     ],
                     [
                         // other rules
