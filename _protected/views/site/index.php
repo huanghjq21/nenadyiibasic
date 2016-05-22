@@ -5,6 +5,9 @@ $this->title = Yii::t('app', Yii::$app->name);
 
 use app\assets\FontAwesomeAsset;
 FontAwesomeAsset::register($this);
+
+use app\assets\ModernBusinessBootstrapAsset;
+ModernBusinessBootstrapAsset::register($this);
 ?>    	
 	
 	<!-- Header Carousel -->
