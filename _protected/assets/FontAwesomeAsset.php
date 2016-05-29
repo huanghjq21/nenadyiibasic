@@ -16,7 +16,7 @@ class FontAwesomeAsset extends AssetBundle
 	
 	public $js = [		
 	];
-	
+	 
 	public $depends = [		
 	];
 }
