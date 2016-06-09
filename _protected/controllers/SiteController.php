@@ -89,6 +89,10 @@ class SiteController extends Controller
     {    	
     	echo "<br/>";    	    	
     	
+    	echo Yii::getAlias("@web");
+    	echo Yii::getVersion();
+    	echo Yii::powered();
+    	
         return $this->render('index');
     }
 

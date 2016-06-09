@@ -4,7 +4,7 @@ $params = require(__DIR__ . '/params.php');
 
 $config = [
     'id' => 'basic',
-    'name' => 'Huang Junqi Portal',
+    'name' => 'Portal',
     'language' => 'en',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log', 'app\components\Aliases'],
